@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
  name: dummy-ingress
  namespace: fs
+ annotations:
+  kubernetes.io/ingress.class: nginx
+  nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
  rules:
  - host: dummy.fullstack.com
@@ -14,4 +17,4 @@ spec:
        service:
         name: dummy-server
         port:
-         number: 3001
+         number: 8080

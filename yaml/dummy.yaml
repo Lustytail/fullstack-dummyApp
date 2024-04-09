@@ -15,7 +15,7 @@ spec:
   spec:
    containers:
    - name: dummy-server
-     image: dummy-server:1.0
+     image: 10.178.0.4:5000/dummy-server:1.0
      imagePullPolicy: IfNotPresent
      ports:
      - containerPort: 3001
@@ -28,8 +28,8 @@ metadata:
   namespace: fs
 spec:
   selector:
-    app: dummy-App
+    app: dummy-app
   ports:
   - protocol: TCP
-    port: 3001
-    targetPort: 8080
+    port: 8080
+    targetPort: 3001
