@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: dummy-ingress
+ namespace: fs
+spec:
+ rules:
+ - host: dummy.fullstack.com
+   http:
+    paths:
+    - path: 
+      pathType: Prefix
+      backend:
+       service:
+        name: dummy-server
+        port:
+         number: 3001
