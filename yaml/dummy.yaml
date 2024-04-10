@@ -15,7 +15,7 @@ spec:
   spec:
    containers:
    - name: dummy-server
-     image: dummy-server:1.0
+     image: us-central1-docker.pkg.dev/coral-sonar-419408/repo/dummy-server:1.0
      imagePullPolicy: IfNotPresent
      ports:
      - containerPort: 3001
