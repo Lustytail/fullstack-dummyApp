@@ -15,7 +15,7 @@ spec:
   spec:
    containers:
    - name: dummy-server
-     image: 10.178.0.4:5000/dummy-server:1.0
+     image: dummy-server:1.0
      imagePullPolicy: IfNotPresent
      ports:
      - containerPort: 3001
